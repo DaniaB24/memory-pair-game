@@ -9,6 +9,7 @@ html, body {
   padding: 0;
   border: 0;
 }
+
 .header {
   position: relative;
   max-width: 100%;
@@ -23,18 +24,11 @@ html, body {
   text-align: center;
   font-family: monospace;
 }
+
 .container {
   height: 100vh;
-  background: url("/images/background.png") center center / cover no-repeat;
-
+  background: url("/memory-pair-game/images/background.png") center center / cover no-repeat;
 }
-/* .header_h1 {
-  font-size: 50px;
-  max-width: 550px;
-  margin: 0 auto;
-  margin-top: 50px;
-  text-transform: uppercase;
-} */
 
 .board_game {
   display: flex;
