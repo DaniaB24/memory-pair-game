@@ -98,7 +98,7 @@ function freezeCard() {
     lockGame = false;
     firstCard = "";
     secondCard = "";
-  }, 1100);
+  }, 800);
 }
 function checkFinish() {
   setTimeout(() => {
