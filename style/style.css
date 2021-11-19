@@ -5,7 +5,7 @@ html, body {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,7 +28,7 @@ html, body {
 
 .container {
   height: 100vh;
-  background: url("/memory-pair-game/images/background.png") center center / cover no-repeat;
+  background: url(../images/background.png) center center / cover no-repeat;
 }
 
 .board_game {
@@ -36,16 +36,16 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 650px;
   height: 650px;
   margin: 0 auto;
   margin-top: 100px;
   -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
 }
 
 .memory_card {
@@ -53,11 +53,11 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: calc(25% - 20px);
   height: calc(33% - 20px);
   position: relative;
@@ -68,15 +68,15 @@ html, body {
   transition: 0.6s;
   margin: 10px;
   -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .memory_card:active {
   -webkit-transform: scale(.97);
-      -ms-transform: scale(.97);
-          transform: scale(.97);
+  -ms-transform: scale(.97);
+  transform: scale(.97);
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
   -o-transition: transform .2s;
@@ -86,7 +86,7 @@ html, body {
 
 .memory_card.flip {
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .front_card, .back_card {
@@ -94,33 +94,33 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
   padding: 20px;
   background-color: rgb(30, 79, 153);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .hide {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .front_card {
   z-index: 2;
   -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .back_card {
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 @media (max-width: 525px) {
@@ -175,11 +175,13 @@ html, body {
     width: 100%;
     height: 100%;
   }
+
   .header_h1 {
     margin-bottom: 5px;
     font-size: 32px;
   }
 }
+
 @media (min-width: 540px) and (max-width: 720px) {
   .board_game {
     width: 400px;
@@ -192,6 +194,7 @@ html, body {
     width: 100%;
     height: 100%;
   }
+
   .header_h1 {
     margin-bottom: 5px;
     font-size: 32px;
@@ -210,11 +213,13 @@ html, body {
     width: 100%;
     height: 100%;
   }
+
   .header_h1 {
     margin-bottom: 5px;
     font-size: 50px;
   }
 }
+
 @media (min-width: 1280px) and (max-height: 800px) {
   .board_game {
     width: 650px;
@@ -227,6 +232,7 @@ html, body {
     width: 100%;
     height: 100%;
   }
+
   .header_h1 {
     margin-bottom: 5px;
     font-size: 50px;
