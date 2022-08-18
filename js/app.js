@@ -1,59 +1,56 @@
 const allCard = document.querySelector(".board_game");
-let hasFlipped = false,
-  firstCard,
-  secondCard;
+let firstCard, secondCard;
 let lockGame = false;
 let allPairCard = 6;
 let pairCard = 0;
 let allPlayerCard = [
   {
-    id: "html",
-    imgFront: "images/js.png",
-    imgBack: "images/html.png",
+    id: "dewey",
+    imgFront: "images/logomcduck.png",
+    imgBack: "images/dewey.png",
   },
   {
-    id: "css",
-    imgFront: "images/js.png",
-    imgBack: "images/css.png",
+    id: "louie",
+    imgFront: "images/logomcduck.png",
+    imgBack: "images/louie.png",
   },
   {
-    id: "react",
-    imgFront: "images/js.png",
-    imgBack: "images/react.png",
+    id: "huey",
+    imgFront: "images/logomcduck.png",
+    imgBack: "images/huey.png",
   },
   {
     id: "git",
-    imgFront: "images/js.png",
-    imgBack: "images/git.png",
+    imgFront: "images/logomcduck.png",
+    imgBack: "images/bentina.png",
   },
   {
     id: "angular",
-    imgFront: "images/js.png",
-    imgBack: "images/angular.png",
+    imgFront: "images/logomcduck.png",
+    imgBack: "images/della.png",
   },
   {
     id: "vue",
-    imgFront: "images/js.png",
-    imgBack: "images/vue.png",
+    imgFront: "images/logomcduck.png",
+    imgBack: "images/mcQuack.png",
   },
 ];
 function flipCard(e) {
   const targetCard = e.target.closest(".memory_card");
-  if(lockGame || !targetCard || targetCard === firstCard) return;
+  if (lockGame || !targetCard || targetCard === firstCard) return;
 
   if (!firstCard) {
     firstCard = targetCard;
     firstCard.classList.add("flip");
     return;
-  }
- else {
+  } else {
     secondCard = targetCard;
     secondCard.classList.add("flip");
     checkMatch();
   }
 }
 const memoryCards = [...allPlayerCard, ...allPlayerCard];
-function sortCard(){
+function sortCard() {
   memoryCards.sort(function () {
     return 0.5 - Math.random();
   });
@@ -69,9 +66,9 @@ function createCard() {
     </div>
 `;
   });
-  clonedCard.forEach(item => {
-    allCard.insertAdjacentHTML('beforeend', item);
-  })
+  clonedCard.forEach((item) => {
+    allCard.insertAdjacentHTML("beforeend", item);
+  });
 }
 createCard();
 
@@ -85,17 +82,19 @@ function checkMatch() {
   }
 }
 function disableCard() {
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
-  firstCard.classList.add("hide");
-  secondCard.classList.add("hide");
+  setTimeout(() => {
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+    firstCard.classList.add("hide");
+    secondCard.classList.add("hide");
+  }, 1000);
 }
 function freezeCard() {
   lockGame = true;
   setTimeout(() => {
+    lockGame = false;
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-    lockGame = false;
     firstCard = "";
     secondCard = "";
   }, 800);
