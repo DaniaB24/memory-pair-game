@@ -74,7 +74,7 @@ createCard();
 
 function checkMatch() {
   if (firstCard.id === secondCard.id) {
-    disableCard();
+      disableCard();
     pairCard++;
     checkFinish();
   } else {
@@ -82,12 +82,14 @@ function checkMatch() {
   }
 }
 function disableCard() {
+  lockGame = true;
   setTimeout(() => {
+    lockGame = false;
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     firstCard.classList.add("hide");
     secondCard.classList.add("hide");
-  }, 1000);
+  }, 800);
 }
 function freezeCard() {
   lockGame = true;
@@ -97,7 +99,7 @@ function freezeCard() {
     secondCard.classList.remove("flip");
     firstCard = "";
     secondCard = "";
-  }, 800);
+  }, 900);
 }
 function checkFinish() {
   setTimeout(() => {
@@ -107,4 +109,5 @@ function checkFinish() {
     }
   }, 800);
 }
+
 allCard.addEventListener("click", flipCard);
