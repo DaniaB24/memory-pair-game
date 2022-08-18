@@ -20,17 +20,17 @@ let allPlayerCard = [
     imgBack: "images/huey.png",
   },
   {
-    id: "git",
+    id: "bentina",
     imgFront: "images/logomcduck.png",
     imgBack: "images/bentina.png",
   },
   {
-    id: "angular",
+    id: "della",
     imgFront: "images/logomcduck.png",
     imgBack: "images/della.png",
   },
   {
-    id: "vue",
+    id: "mcQuack",
     imgFront: "images/logomcduck.png",
     imgBack: "images/mcQuack.png",
   },
