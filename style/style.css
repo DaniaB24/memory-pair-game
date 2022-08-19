@@ -1,15 +1,10 @@
 @font-face {
   font-family: "waltographui";
   font-style: normal;
-  src: url("/fonts/7fonts.ru_waltographui-webfont.eot");
-  src: url("/fonts/7fonts.ru_waltographui-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/7fonts.ru_waltographui-webfont.woff2"),
+  src:url("/fonts/7fonts.ru_waltographui-webfont.woff2"),
     url("/fonts/7fonts.ru_waltographui-webfont.woff2") format("woff2"),
     url("/fonts/7fonts.ru_waltographui-webfont.woff") format("woff"),
     url("/fonts/7fonts.ru_waltographui-webfont.ttf") format("truetype"),
-    url("/fonts/7fonts.ru_waltographui-webfont.svg#northbergenregular")
-      format("svg");
 }
 html,
 body {
